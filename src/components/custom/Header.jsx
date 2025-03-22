@@ -18,8 +18,7 @@ import { FcGoogle } from 'react-icons/fc'
 import axios from 'axios'
 
 function Header() {
-
-  const user = JSON.parse(localStorage.getItem('user'))
+  const user = localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user')) : null;
   const [openDialog,setOpenDialog] = useState(false)
 
   const login = useGoogleLogin({
